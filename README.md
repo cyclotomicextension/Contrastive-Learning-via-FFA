@@ -39,7 +39,9 @@ Run the script:
 # Resources
 
 <a href="https://discuss.pytorch.org/t/valueerror-expected-input-batch-size-324-to-match-target-batch-size-4/24498">ValueError: Expected input batch size 324 to match target batch size 4</a>
+
 <a href="https://blog.paperspace.com/writing-cnns-from-scratch-in-pytorch/">Writing CNNs from scratch in PyTorch</a>
+
 <a href="https://stackoverflow.com/questions/66091226/runtimeerror-expected-all-tensors-to-be-on-the-same-device">RuntimeError: expected all tensors to be on the same device</a>
 
 # Contributions
