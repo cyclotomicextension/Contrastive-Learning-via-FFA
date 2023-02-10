@@ -18,9 +18,11 @@ To create the negative data, we use a mask containing regions of ones and zeros.
 
 # Implementation
 
-The implementation of FF is done in PyTorch. To perform representation learning, we first learn to transform the input vectors into representation vectors without using any information about the labels. This is done by using real data vectors as the positive data and corrupted data vectors as the negative data. The negative data is created by transforming the original image data. The first step is to create a binary mask, where each element of the image is thresholded by 0.5. Elements with values greater than 0.5 are set to 1, while the rest are set to 0. The mask is then cast to float data type. We then create a hybrid image by adding together original image times the mask and image times the reverse of the mask. This hybrid image is then transformed into representation vectors, and a simple linear transformation maps these representation vectors to vectors of logits.
+The implementation of FF is done in PyTorch. To perform representation learning, we first learn to transform the input vectors into representation vectors without using any information about the labels. This is done by using real data vectors as the positive data and corrupted data vectors as the negative data. We then create a hybrid image by adding together original image times the mask and image times the reverse of the mask. This hybrid image is then transformed into representation vectors, and a simple linear transformation maps these representation vectors to vectors of logits.
 
 The learning of the linear transformation to the logits is supervised but does not involve learning any hidden layers so it does not require backpropagation of derivatives. 
+
+Accuracy of the network on the training images: 86.22 % and the accuracy of the network on the testing images: 87.0 %
 
 # Usage
 
