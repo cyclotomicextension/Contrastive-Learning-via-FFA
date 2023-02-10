@@ -1,8 +1,8 @@
 # Contrastive Learning via Forward-Forward algorithm
 
-In the .py file attached, I have tried implementing a simple supervised example of FF via representation learning detailed in `The Forward-Forward Algorithm: Some Preliminary Investigations` by Geoffrey Hinton @ Google Brain. 
+I have tried implementing a simple unsupervised example of FF via representation learning detailed in `The Forward-Forward Algorithm: Some Preliminary Investigations` by Geoffrey Hinton @ Google Brain. 
 
-However, my implemention may not be an exact representation of what he has outlined. This repository and the code attached in this, has been implemented to learn more about CNN and Representation Learning using PyTorch.
+However, my implemention may not be an exact representation of what he has outlined in the paper. This repository and the code attached in this, has been implemented to learn more about CNN and Representation Learning using PyTorch.
 
 # Introduction
 
