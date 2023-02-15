@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""FFA-Implemention of Contrastive Learning
+"""Forward Forward ALGORITHM
+-Implemention of Contrastive Learning on MNIST Dataset
 
 Originally created on colaboratory
 
