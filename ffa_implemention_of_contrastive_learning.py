@@ -152,6 +152,8 @@ with torch.no_grad():
     neg_data = (images * mask) + (images * mask.transpose(-2,-1)).to(device)
     pos_data = images.to(device)
     combined_data = torch.cat((pos_data, neg_data), dim=0).to(device)
+    indices = torch.randperm(combined_data.size(0))  
+    combined_data_shuffled = combined_data[indices]  
     combined_data = combined_data[:100].to(device)
     representation_vectors = model.conv1(combined_data).relu().to(device)
     representation_vectors = model.conv2(representation_vectors).relu().to(device)
