@@ -14,6 +14,7 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
+import random
 
 input_size = 784 # 28x28
 hidden_size = 500 
@@ -21,6 +22,8 @@ num_classes = 10
 num_epochs = 100
 batch_size = 100
 learning_rate = 0.001
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Import MNIST dataset 
 train_dataset = torchvision.datasets.MNIST(root='./data', 
@@ -173,6 +176,8 @@ with torch.no_grad():
     neg_data = (images * mask) + (images * mask.transpose(-2,-1)).to(device)
     pos_data = images.to(device)
     combined_data = torch.cat((pos_data, neg_data), dim=0).to(device)
+    indices = torch.randperm(combined_data.size(0))  
+    combined_data_shuffled = combined_data[indices]     
     combined_data = combined_data[:100].to(device)
     representation_vectors = model.conv1(combined_data).relu().to(device)
     representation_vectors = model.conv2(representation_vectors).relu().to(device)
