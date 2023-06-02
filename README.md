@@ -22,7 +22,7 @@ The implementation of FF is done in PyTorch. To perform representation learning,
 
 The learning of the linear transformation to the logits is supervised but does not involve learning any hidden layers so it does not require backpropagation of derivatives. 
 
-Accuracy of the network on the training images: 86.22 % and the accuracy of the network on the testing images: 87.0 %
+Accuracy of the network on the training images: 86.72833333333334 % and the accuracy of the network on the testing images: 87.08 %
 
 # Usage
 
