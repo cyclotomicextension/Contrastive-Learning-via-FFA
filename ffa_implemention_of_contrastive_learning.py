@@ -105,13 +105,8 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
-# Create the filter
 filter = torch.tensor([[1/4, 1/2, 1/4]])
-
-# Repeat the filter along the channel axis
 filter = filter.unsqueeze(0).unsqueeze(0)
-
-# Move the filter tensor to the GPU
 filter = filter.to(device)
 
 n_total_steps = len(train_loader)
